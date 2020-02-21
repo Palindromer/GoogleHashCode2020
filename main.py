@@ -14,8 +14,6 @@ def writeLibrary(f, library):
     f.write(bookScoreStr)
     f.write('\n')
 
-#def libraryProcess(f, library):
-
 
 def process(fileName):
     parseResult = MyParser().ParseFile(fileName)
@@ -52,13 +50,11 @@ def process(fileName):
 
 
 process(fileNames[0])
-
 process(fileNames[1])
 process(fileNames[2])
 process(fileNames[3])
 process(fileNames[4])   
 process(fileNames[5])
-
 
 
 pass

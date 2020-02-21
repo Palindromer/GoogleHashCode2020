@@ -18,12 +18,6 @@ class MyParser:
             book = Book(i, int(lines[1][i]))
             book.isUsed = False
             books.append(book)
-            
-            
-        #books =  [{index, bookScore} for index, bookScore in lines[1]] 
-        #books = list(map(lambda index, bookScore: Book(index, bookScore), lines[1]))
-        
-
 
         libraries = []
 
@@ -37,15 +31,10 @@ class MyParser:
             library.initTime = int(lines[i][1])
             library.rate = int(lines[i][2])
 
-            
-
-            if (library.rate == 0):
-                print("")
-
             library.books = []
             i += 1
             for id in range(len(lines[i])):
-                bookId = int(lines[i][id])                
+                bookId = int(lines[i][id])
                 library.books.append(books[bookId])
 
             library.totalScore = library.totalScore()
